@@ -1,0 +1,3 @@
+TaskType,User,Country,StartTime,Endtime,Days
+Email,U1,India,12:00:00,20:00:00,Thrusday and Friday and Monday
+SMS,U2,USA,04:00:00,10:00:00,
