@@ -18,7 +18,8 @@ class TimeBasedExectuion:
         data = pd.read_csv(self.file_path).fillna('all')
         return data.values
 
-    def check_timezone(self, country: str):
+    @staticmethod
+    def check_timezone(country: str):
         try:
             geolocator = Nominatim(user_agent="geoapiExercises")
             location = geolocator.geocode(country, timeout=10)
@@ -36,7 +37,8 @@ class TimeBasedExectuion:
         except Exception:
             logging.exception("Exception Railed while fetching time and day")
 
-    def is_time_between(self, begin_time: str, end_time: str, check_time: str):
+    @staticmethod
+    def is_time_between(begin_time: str, end_time: str, check_time: str):
 
         logging.info(f"Start time: {begin_time} End time: {end_time} current time: {check_time}")
         if begin_time < end_time:
